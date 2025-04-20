@@ -1,13 +1,10 @@
-import random
-
 class DistributionCenter:
-    def __init__(self, receivers):
-        self.receivers = receivers
+    def __init__(self, id, name, location, capacity, current_stock):
+        self.id = id
+        self.name = name
+        self.location = location
+        self.capacity = capacity
+        self.current_stock = current_stock
 
-    def receive_donation(self, food_item, env, donor_name):
-        if food_item.is_expired(env.now):
-            print(f"[t={env.now}] {donor_name}'s don de {food_item.name} est périmé. Jeté.")
-            return
-        receiver = random.choice(self.receivers)
-        yield env.timeout(1)
-        receiver.receive(food_item, env)
+    def __str__(self):
+        return f"DistributionCenter({self.name}, stock: {self.current_stock})"
