@@ -112,3 +112,4 @@ for food, data in grouped.items():
     for detail in data["détails"]:
         print(f"  -> {detail[0]} ({detail[1]}{data['unit']}) via {detail[2]} ({detail[3]})")
 
+
