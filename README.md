@@ -88,9 +88,9 @@ Les scénarios simulés permettent d'évaluer la performance et l'efficacité de
 
 ## 👩‍💻 Équipe projet
 
-- Nour  
+- Nour Saidani 
 - Ghada Dagdagui  
-- Hene Trigui  
+- Hanene Trigui  
 - Taher  
 
 ---
