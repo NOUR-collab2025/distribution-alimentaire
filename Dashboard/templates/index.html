@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Delivery Simulation</title>
+    <style>
+        #simulation-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #eee;
+            margin-bottom: 10px;
+        }
+        .grid-cell {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            border-radius: 4px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Food Delivery Simulation</h1>
+    <div id="simulation-container"></div>
+    <div>
+        <button onclick="startSimulation()">Start</button>
+        <button onclick="pauseSimulation()">Pause</button>
+        <button onclick="resetSimulation()">Reset</button>
+
+    </div>
+    <div id="status">Status will show here</div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
