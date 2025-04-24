@@ -23,15 +23,13 @@ class FoodDeliveryModel(Model):
             agent = DonorAgent(i, self, food_amt)
             x = self.random.randrange(self.grid.width)
             y = self.random.randrange(self.grid.height)
-            agent.pos = (x, y)
-            self.grid.place_agent(agent, (x, y))
+            self.grid.place_agent(agent, (x, y))  # Ne pas setter .pos à la main
             self.schedule.append(agent)
 
         for i in range(num_donors, num_donors + num_recipients):
             agent = RecipientAgent(i, self)
             x = self.random.randrange(self.grid.width)
             y = self.random.randrange(self.grid.height)
-            agent.pos = (x, y)
             self.grid.place_agent(agent, (x, y))
             self.schedule.append(agent)
 
@@ -39,7 +37,6 @@ class FoodDeliveryModel(Model):
             agent = TransportAgent(i, self)
             x = self.random.randrange(self.grid.width)
             y = self.random.randrange(self.grid.height)
-            agent.pos = (x, y)
             self.grid.place_agent(agent, (x, y))
             self.schedule.append(agent)
 

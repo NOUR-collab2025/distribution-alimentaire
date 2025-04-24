@@ -5,6 +5,9 @@ class DonorAgent(Agent):
         self.unique_id = unique_id
         self.model = model
         self.food = food_amt  # Will be set by model
+        self.delivered = False
+        self.pos = None  # à ajouter dans chaque classe d'agent
+
         if hasattr(model, "register_agent"):
             model.register_agent(self)
 
@@ -18,6 +21,8 @@ class RecipientAgent(Agent):
         self.unique_id = unique_id
         self.model = model
         self.food = 0
+        self.pos = None  # à ajouter dans chaque classe d'agent
+
         if hasattr(model, "register_agent"):
             model.register_agent(self)
 
@@ -30,6 +35,8 @@ class TransportAgent(Agent):
         self.unique_id = unique_id
         self.model = model
         self.food = 0
+        self.pos = None  # à ajouter dans chaque classe d'agent
+
         if hasattr(model, "register_agent"):
             model.register_agent(self)
 
